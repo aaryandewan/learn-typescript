@@ -7,8 +7,6 @@ appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 
 console.log(123);
 
-let a = {
-  name: "aar",
-};
+let x;
 
-a.z.push(123);
+console.log(x.name)
