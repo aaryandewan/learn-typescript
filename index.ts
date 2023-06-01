@@ -7,6 +7,6 @@ appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 
 console.log(123);
 
-let x;
+let x = {};
 
-console.log(x.name)
+x[123].name = 1;
