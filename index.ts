@@ -11,13 +11,13 @@ function outer(x : number){
     else return false;
   }
 
-  function equals(y : number){
-    if(x==y) return true;
-    else return false;
+  function notequals(y : number){
+    if(x!=y) return false;
+    else return true;
   }
 
-  return equals;
+  return {equals, notequals};
 }
 
 let my = outer(5);
-console.log(my(5));
+console.log(my.equals(5));
