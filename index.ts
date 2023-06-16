@@ -5,8 +5,19 @@ import './style.css';
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 
-function aaryan(...things){
-  console.log(things);
+function outer(x : number){
+  function equals(y : number){
+    if(x==y) return true;
+    else return false;
+  }
+
+  function equals(y : number){
+    if(x==y) return true;
+    else return false;
+  }
+
+  return equals;
 }
 
-aaryan(1,2,3);
+let my = outer(5);
+console.log(my(5));
