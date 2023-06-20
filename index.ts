@@ -5,19 +5,8 @@ import './style.css';
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 
-function outer(x : number){
-  function equals(y : number){
-    if(x==y) return true;
-    else return false;
-  }
-
-  function notequals(y : number){
-    if(x!=y) return false;
-    else return true;
-  }
-
-  return {equals, notequals};
+function firstElement<Type>(arr: Type[]): Type {
+  return arr[0];
 }
 
-let my = outer(5);
-console.log(my.equals(5));
+console.log(firstElement([1,23]));
